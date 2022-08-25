@@ -4,8 +4,8 @@ programa
 	
 	funcao inicio()
 	{
-		real porcentagem = 0.0015
-		real salario = 1500 
+		real porcentagem = 0.015
+		real salario = 1000 
 		inteiro ano = 2005
 
 		enquanto(ano <= 2022){
