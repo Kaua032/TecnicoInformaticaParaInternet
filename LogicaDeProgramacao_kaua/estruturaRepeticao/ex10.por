@@ -16,7 +16,7 @@ programa
 			senao{
 				escreva("Digite um número: ")
 				leia(num)
-				se(num > maior){
+				se(num > maior e num != segmaior){
 					segmaior = maior
 					maior = num
 				}
