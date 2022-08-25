@@ -5,7 +5,8 @@ programa
 	{
 		inteiro num = 0, maior = 0, segmaior = 0, vez = 1
 		
-		enquanto(vez <= 10){
+		
+		enquanto(vez <= 10){
 			se(vez == 1){
 				escreva("Digite um número: ")
 				leia(num)
