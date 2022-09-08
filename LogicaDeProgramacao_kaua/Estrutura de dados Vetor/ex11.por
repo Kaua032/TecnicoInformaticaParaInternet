@@ -3,7 +3,7 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro lista1[10], lista2[10], lista3[20], soma[10], mult[10], i, i2, diferentes[10]
+		inteiro lista1[10], lista2[10], soma[10], mult[10], i, i2, temnosegundo[10], j = 0
 		logico consequencia = verdadeiro
 		
 		escreva("Digite a primeira lista: \n")
@@ -42,12 +42,16 @@ programa
 				}
 			}
 			se(consequencia == verdadeiro){
-				diferentes[i] = lista2[i]
+				temnosegundo[j] = lista2[i]
+				j++
 			}
 			consequencia = verdadeiro
 		}
 		para(i=0;i<10;i++){
-			escreva(diferentes[i], " ")
+			enquanto(temnosegundo[i] != 0){
+				escreva(temnosegundo[i], " ")
+				pare
+			}
 		}
 		
 		escreva("\nSoma: \n")
