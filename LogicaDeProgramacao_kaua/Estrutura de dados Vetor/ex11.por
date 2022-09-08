@@ -3,8 +3,8 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro lista1[10], lista2[10], soma[10], mult[10], i, i2, temnosegundo[10], j = 0
-		logico consequencia = verdadeiro
+		inteiro lista1[10], lista2[10], lista3[20], soma[10], mult[10], i, i2, temnosegundo[10], j = 0, i3, temnoprimeiro[10]
+		logico consequencia = verdadeiro, consequencia2 = verdadeiro
 		
 		escreva("Digite a primeira lista: \n")
 		para(i=0;i<10;i++){
@@ -15,15 +15,6 @@ programa
 			leia(lista2[i])
 		}
 
-		escreva("\nTodos os elementos: \n")
-		para(i=0;i<10;i++){
-			escreva(lista1[i], " ")
-		}
-		escreva("\n")
-		para(i=0;i<10;i++){
-			escreva(lista2[i], " ")
-		}
-		
 		escreva("\nElementos que tem nos dois: \n")
 		para(i=0;i<10;i++){
 			para(i2=0;i2 <10;i2++){
@@ -33,7 +24,8 @@ programa
 			}
 		}
 		
-		escreva("\nElementos que tem na segundo mas não tem no primeiro: \n")
+		escreva("\nElementos que tem no segundo mas não tem no primeiro: \n")
+		j = 0
 		para(i=0;i<10;i++){
 			para(i2=0;i2 <10;i2++){
 				se(lista2[i] == lista1[i2]){
@@ -47,6 +39,22 @@ programa
 			}
 			consequencia = verdadeiro
 		}
+
+		j = 0
+		para(i=0;i<10;i++){
+			para(i2=0;i2 <10;i2++){
+				se(lista1[i] == lista2[i2]){
+					consequencia2 = falso
+					
+				}
+			}
+			se(consequencia2 == verdadeiro){
+				temnoprimeiro[j] = lista1[i]
+				j++
+			}
+			consequencia2 = verdadeiro
+		}
+		
 		para(i=0;i<10;i++){
 			enquanto(temnosegundo[i] != 0){
 				escreva(temnosegundo[i], " ")
@@ -65,6 +73,29 @@ programa
 			mult[i] = lista1[i] * lista2[i]
 			escreva(mult[i], " ")
 		}
+
+		escreva("\nTodos os elementos sem repetição: \n")
+		
+		para(i=0;i<10;i++){
+			enquanto(temnoprimeiro[i] != 0){
+				escreva(temnoprimeiro[i]," ")
+				pare
+			}
+		}
+		para(i=0;i<10;i++){
+			enquanto(temnosegundo[i] != 0){
+				escreva(temnosegundo[i]," ")
+				pare
+			}
+		}
+		para(i=0;i<10;i++){
+			para(i2=0;i2 <10;i2++){
+				se(lista1[i] == lista2[i2]){
+					escreva(lista1[i], " ")
+				}
+			}
+		}
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
